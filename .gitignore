@@ -1,3 +1,11 @@
+# Terraform
+.terraform
+.terraform/*
+*.tfstate*
+selections.json
+
+# Lambda zips
+*.zip
 # Logs
 logs
 *.log
