@@ -6,7 +6,7 @@ data "archive_file" "presigneds3url_zip" {
 
 resource "aws_s3_bucket_object" "presigneds3url_artifacts" {
   bucket = aws_s3_bucket.lambda_artifacts.id
-  key    = "v1.0.0/presigneds3url.zip"
+  key    = "${var.app_version}/presigneds3url.zip"
   source = data.archive_file.presigneds3url_zip.output_path ##"${path.module}/artifacts/presigneds3url.zip"
   etag = filemd5(data.archive_file.presigneds3url_zip.output_path)
 }
@@ -19,7 +19,7 @@ resource "aws_cloudwatch_log_group" "presigneds3url_log" {
 resource "aws_lambda_function" "presigneds3url" {
    function_name = "imagelense_presigneds3url"
    s3_bucket = aws_s3_bucket.lambda_artifacts.id
-   s3_key    = "v1.0.0/presigneds3url.zip"
+   s3_key    = aws_s3_bucket_object.presigneds3url_artifacts.key
    handler = "main.handler"
    runtime = "nodejs12.x"
    role = aws_iam_role.presigneds3url_exec.arn

@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-firestore.js"></script>
+
 </head>
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -84,6 +87,43 @@
             <span class="sr-only">20% Complete</span>
         </div>
     </div>
+     <!-- Row of movies -->
+     <div id="image-list" class="row">
+        <div class="row">
+            <div class="col-md-4">
+              <div class="thumbnail">
+                  <img src="https://imagelenseimages20210214063200578500000001.s3.amazonaws.com/0399ad187dcb85360789e982a7e694bdb6087762/Nice-Windows-10-Wallpaper.JPG" alt="Lights" style="width:100%">
+                  <div class="caption">
+                    <span class="label label-success"> Caption</span><p>Lorem ipsum...</p>
+                    <span class="label label-success">Tags</span><p><span class="badge">Human</span><span class="badge">Landa</span></p>
+                    <span class="label label-success">Landmark</span><p>Land</p>
+                    <span class="label label-success">Celebraties</span><p>Sachin</p>
+                  </div>
+                  
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+             
+                  <img src="https://imagelenseimages20210214063200578500000001.s3.amazonaws.com/0399ad187dcb85360789e982a7e694bdb6087762/Nice-Windows-10-Wallpaper.JPG" alt="Nature" style="width:100%">
+                  <div class="caption">
+                    <p>Lorem ipsum...</p>
+                  </div>
+               
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                
+                  <img src="https://imagelenseimages20210214063200578500000001.s3.amazonaws.com/0399ad187dcb85360789e982a7e694bdb6087762/Nice-Windows-10-Wallpaper.JPG" alt="Fjords" style="width:100%">
+                  <div class="caption">
+                    <p>Lorem ipsum...</p>
+                  </div>
+             
+              </div>
+            </div>
+          </div>
+    </div>
 
 </div>
 
@@ -94,5 +134,5 @@
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>
 <script src="js/upload-controller.js"></script>
-
+<script src="js/image-controller.js"></script>
 </html>

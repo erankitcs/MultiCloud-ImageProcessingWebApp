@@ -1,11 +1,13 @@
+# Firebase credentials.
+config.js
+serviceAccountKey.json
 # Terraform
 .terraform/plugins/selections.json
 .terraform/*
 *.tfstate*
 selections.json
-
 # Lambda zips
-*.zip
+artifacts/*.zip
 # Logs
 logs
 *.log
