@@ -34,14 +34,16 @@ var imageController = {
         //console.log("id - ",id)
         //console.log("data-",data)
         var newImageElement = this.uiElements.imageCardTemplate.clone().attr('id', id);
-        newImageElement.find('img').attr('src', "https://"+data.url);
-        newImageElement.find('#caption').text(data.captions[0].text);
+        newImageElement.find('img').attr('src',data.url);
+        if (data.captions[0]) {
+          newImageElement.find('#caption').text(data.captions[0].text);
+        }
         //newImageElement.find('#tags').append(data.tags.slice(0,5));
         $.each( data.tags, function( key, value ) {
           newImageElement.find('#tags').append("<span class=badge>"+value+"</span>");
         });
         $.each( data.categories.reverse(), function( key, value ) {
-          newImageElement.find('#categories').append(value.name.slice(0,-1),' with score-',value.score,'<br>');
+          newImageElement.find('#categories').append(value.name,' with score-',value.score,'<br>');
         });
         newImageElement.find('#backgroundcolor').css('color', data.dominantColorBackground).text('Background : '+data.dominantColorBackground);
         newImageElement.find('#foregroundcolor').css('color', data.dominantColorForeground).text('Foreground : '+data.dominantColorForeground);
