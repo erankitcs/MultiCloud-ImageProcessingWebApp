@@ -21,3 +21,23 @@ resource "aws_s3_bucket" "webapp_images" {
     Environment = "Dev"
   }
 }
+
+resource "aws_s3_bucket_policy" "webapp_images_policy" {
+  bucket = aws_s3_bucket.webapp_images.id
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Id      = "ReadPublic"
+    Statement = [
+      {
+        Sid       = "AllowPublicRead"
+        Effect    = "Allow"
+        Principal = "*"
+        Action    = "s3:GetObject"
+        Resource = [
+          aws_s3_bucket.webapp_images.arn,
+          "${aws_s3_bucket.webapp_images.arn}/*",
+        ]
+      },
+    ]
+  })
+}
