@@ -1,5 +1,5 @@
 # Firebase credentials.
-config.js
+website/js/config.js
 serviceAccountKey.json
 # Terraform
 .terraform/plugins/selections.json

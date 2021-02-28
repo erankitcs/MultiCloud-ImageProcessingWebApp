@@ -76,6 +76,18 @@
     </div>
 </div>
 
+<div id="image-template" class="col-md-4">
+    <div class="thumbnail">
+        <img src="" alt="Image Not Available." style="width:100%">
+        <div class="caption">
+          <span class="label label-success">Caption</span><p id="caption"></p>
+          <span class="label label-success">Tags</span><p id="tags"></p>
+          <span class="label label-success">Categories</span><p id="categories"></p>
+          <span class="label label-success">Colors</span><p id="backgroundcolor"></p><p id="foregroundcolor"></p>
+        </div>    
+    </div>
+</div>
+
 <div class="container" id="image-list-container">
     <span id="upload-image-button" class="btn btn-info btn-file">
         <span class="glyphicon glyphicon-plus"></span>
@@ -89,40 +101,13 @@
     </div>
      <!-- Row of movies -->
      <div id="image-list" class="row">
-        <div class="row">
-            <div class="col-md-4">
-              <div class="thumbnail">
-                  <img src="https://imagelenseimages20210214063200578500000001.s3.amazonaws.com/0399ad187dcb85360789e982a7e694bdb6087762/Nice-Windows-10-Wallpaper.JPG" alt="Lights" style="width:100%">
-                  <div class="caption">
-                    <span class="label label-success"> Caption</span><p>Lorem ipsum...</p>
-                    <span class="label label-success">Tags</span><p><span class="badge">Human</span><span class="badge">Landa</span></p>
-                    <span class="label label-success">Landmark</span><p>Land</p>
-                    <span class="label label-success">Celebraties</span><p>Sachin</p>
-                  </div>
-                  
-              </div>
+        <div id="analysis-template" class="col-md-4">
+            <div class="thumbnail">
+            <object id="loading-indicator" type="image/svg+xml" data="images/loading-indicator.svg">
+                Your browser does not support SVG
+            </object>
             </div>
-            <div class="col-md-4">
-              <div class="thumbnail">
-             
-                  <img src="https://imagelenseimages20210214063200578500000001.s3.amazonaws.com/0399ad187dcb85360789e982a7e694bdb6087762/Nice-Windows-10-Wallpaper.JPG" alt="Nature" style="width:100%">
-                  <div class="caption">
-                    <p>Lorem ipsum...</p>
-                  </div>
-               
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="thumbnail">
-                
-                  <img src="https://imagelenseimages20210214063200578500000001.s3.amazonaws.com/0399ad187dcb85360789e982a7e694bdb6087762/Nice-Windows-10-Wallpaper.JPG" alt="Fjords" style="width:100%">
-                  <div class="caption">
-                    <p>Lorem ipsum...</p>
-                  </div>
-             
-              </div>
-            </div>
-          </div>
+        </div>
     </div>
 
 </div>

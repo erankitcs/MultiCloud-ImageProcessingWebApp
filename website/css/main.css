@@ -69,3 +69,11 @@ body {
 nav {
 	z-index: 997 !important;
 }
+
+#image-template {
+	display: none;
+}
+
+#analysis-template{
+	display: none;
+}

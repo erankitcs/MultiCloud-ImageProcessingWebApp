@@ -20,7 +20,7 @@ const handler = (event, context, callback) => {
    console.log(event)
    const key = event.Records[0].s3.object.key;
    const bucket = event.Records[0].s3.bucket.name;
-   const imageUrl = `${bucket}/${key}`;
+   const imageUrl = `https://s3.amazonaws.com/${bucket}/${key}`;
    const imageKey = decodeURIComponent(key);
    const uniqueImageKey = imageKey.split('/')[0];
    var params = {Bucket: bucket, Key: key, Expires: 60};
