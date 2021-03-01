@@ -30,6 +30,6 @@ GCP would be used for realtime database.
 ### Improvements
 1. User SingUp and SignIn.
 2. Authenticate API Gateway.
-3. Expose Image to user via Cloud Front with Authentication.
+3. Expose Image to user via Cloud Front.
 4. Blue/Green Deployment for Lambda Function.
 5. Elastic Beanstalk for NodeJs Front End Application.
