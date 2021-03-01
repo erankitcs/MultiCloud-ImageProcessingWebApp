@@ -21,6 +21,12 @@ We would be using Azure for image analysis.
 GCP would be used for realtime database.
 - GCP Firestore for realtime database.
 
+### Setup
+1. Install AWS CLI and run `aws configure`  to connect AWS.
+2. Use `az login -u <user> -p <password>` to connect Azure.
+3. Create a service account into GCP project and download service account key json file.
+4. Install gcloud and run `gcloud auth activate-service-account <service account> --key-file=<json filepath>`
+5. For windows, run `$env:GOOGLE_APPLICATION_CREDENTIALS="<json file path>"`
 ### Architecure
 ![Screenshot](MultiCloud-ImageLense.png)
 
